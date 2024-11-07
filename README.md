@@ -48,11 +48,11 @@ Work on a single data analysis Jupyter notebook using functions from `preparatio
 | Interaction on project           |                |              |            |
 | Category                         | min per person | point factor | max points |
 | Commits                          | 1              | 1            | 1          |
-| Pull requests                    | 1              | 4            | 4          |
-| PR Accepted                      | 1              | 4            | 4          |
+| Pull requests                    | 1              | 2            | 2          |
+| PR Accepted                      | 1              | 8            | 8          |
 | Other PR reviewed (by request)   | 1              | 4            | 4          |     
-| Issues                           | 1              | 1            | 1          | 
-| Closed Issues                    | 1              | 1            | 1          |
+| Issues                           | 0              | 0            | 0          | 
+| Closed Issues                    | 0              | 0            | 0          |
 | \# Conversations                 | 12             | 1/4          | 3          |
 |                                  |                |              |            |
 | Total                            |                |              | 18         |
