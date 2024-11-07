@@ -3,6 +3,8 @@
 **Take the FFT of an image of a periodic structure, remove the periodic structure and generate a cleaned-up image without the periodic structure**
 
 This Homework is seperated into three task groups (data collection, data preparation, and data presentation) and the same rules apply as in HW4.
+Remember you are in charge to have a review assigned if one available, also you have to finish your review 2 hours after assignment.
+Once the review is finished the original author has 12 hours to fix the issues mentionend in the review.
 
 ## Task group 1 data collection (3 members)
 Make sure your image is in compliance with the the license of this repository and add a appropiate NOTES for the repository.
@@ -14,7 +16,7 @@ For the DataFrame use a common layout (columns and rows) and to add to the repos
 ## Task group 2 data preparation (7 members)
 Work on one single data preparation module called `preparation.py`  that contains the following functions:
 - write pytest fixtures for the unit test for the input pandas dataframe and for the FFT data (1 member due Monday 2024-11-11 midnight)
-- write a function that cuts the images to a FFT suitable pixel number (1 member due Monday midnight)
+- write a function that cuts the images to a FFT suitable pixel number (1 member due Monday 2024-11-11 midnight)
 - write a function that reads in the pickle files from the data collection task and returns a pandas DataFrame.
 Generate a 2D index / column header with the actual dimensions of the object in the picture using the size marker or the fixed size set in the blender file (1 member due Tuesday midnight)
   
@@ -29,8 +31,8 @@ All functions must also include docstrings and unit tests for pytest using the p
 ## Task group 3 data presentation (max 4 members)
 Work on a single data analysis Jupyter notebook using functions from `preparation.py` that contain for each task below only *one plot*:
 
-- One plot with the original frequency information with the removed part being highlighted (1 member per picture due 2nd Monday 2pm)
-- One plot with the cleaned-up image (1 member per picture due 2nd Monday 2pm)
+- One plot with the original frequency information with the removed part being highlighted (1 member per picture due Monday 2024-11-18 2pm)
+- One plot with the cleaned-up image (1 member per picture due Monday 2024-11-18 2pm)
 
 ## Task group 4 maintainers (max 2 members)
 - Reuse github actions for linting and unit tests
