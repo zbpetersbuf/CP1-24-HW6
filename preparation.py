@@ -3,4 +3,3 @@
 def dummy():
     """ dummy functions for template file"""
     return 0
-  
