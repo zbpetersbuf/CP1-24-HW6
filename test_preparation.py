@@ -1,6 +1,6 @@
 """ unit test template """
 
-import prepartion as prep
+import preparation as prep
 
 def test_dummy():
     """ unit test for dummy function """
