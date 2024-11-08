@@ -29,7 +29,7 @@ All following functions should assume as an input a pandas DataFrame with the in
 All functions must also include docstrings and unit tests for pytest using the pytest fixture in `test_preparation.py`
 
 ## Task group 3 data presentation (max 4 members)
-Work on a single data analysis Jupyter notebook using functions from `preparation.py` that contain for each task below only *one plot*:
+Work on a single data analysis Jupyter notebook called `data_analysis.ipynb` using functions from `preparation.py` that contain for each task below only *one plot*:
 
 - One plot with the original frequency information with the removed part being highlighted (1 member per picture due Monday 2024-11-18 2pm)
 - One plot with the cleaned-up image (1 member per picture due Monday 2024-11-18 2pm)
