@@ -33,11 +33,11 @@ def test_twod_inv_fft():
     assert np.all(compare1)
 
 def test_twod_calc_freq():
-    """this test just makes sure that what the function outputs is indeed the correct size"""
+    """This test just makes sure that what the function outputs is indeed the correct size"""
     img = imgage()
     array1, array2 = prep.twod_calc_freq(img)
-    width, height = img.size
-    len(array1)
+    image = np.array(img)
+    width, height = image.shape
     assert len(array1) == width
     assert len(array2) == height
     assert np.all(np.isclose(np.real( prep.twod_calc_freq(img)),0.0, atol=2))
