@@ -37,8 +37,7 @@ def test_twod_calc_freq():
     img = imgage()
     array1, array2 = prep.twod_calc_freq(img)
     image = np.array(img)
-    width, height = image.size
-    len(array1)
+    width, height = image.shape
     assert len(array1) == width
     assert len(array2) == height
     assert np.all(np.isclose(np.real( prep.twod_calc_freq(img)),0.0, atol=2))
