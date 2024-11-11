@@ -15,10 +15,8 @@ def sq_img():
         in pandas DataFrame format (e.g., 256x256) with default indexing. """
     # Define size
     pix = 256
-    
     # Generate random pixel intensities for the simulated image (grayscale representation)
     data = np.random.randint(256, size = (pix, pix), dtype = np.uint8)
-    
     # Convert to DataFrame
     return pd.DataFrame(data)
 
@@ -29,9 +27,7 @@ def rect_img():
     # Define size
     pix_x = 512
     pix_y = 256
-    
     # Generate random pixel intensities for the simulated image (grayscale representation)
     data = np.random.randint(256, size = (pix_x, pix_y), dtype = np.uint8)
-    
     # Convert to DataFrame
     return pd.DataFrame(data)
