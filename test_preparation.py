@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import pytest
 import preparation as prep
+# pylint: disable=W0621
 
 def test_dummy():
     """ unit test for dummy function """
@@ -32,25 +33,25 @@ def rect_img():
     # Convert to DataFrame
     return pd.DataFrame(data)
 
-def test_twod_fft_mag():
+def test_twod_fft_mag(sq_img):
     """this test makes sure that the twod_fft_mag functions properly, by testing this also makes
     sure that the length and widths of these two data sets are the same with the same assert"""
-    img = imgage()
+    img = sq_img
     compare = np.isclose(prep.twod_fft_mag(img),np.fft.fft2(np.array(img)), atol=1e-8)
     assert np.all(compare)
 
-def test_twod_inv_fft():
+def test_twod_inv_fft(sq_img):
     """this compares the inves of the fft function agenced the original unlaltered
     2d matrix this also makes sure that the length and widths of these two data
     sets are the same with the same assert"""
-    img = imgage()
+    img = sq_img
     compare1 = np.isclose(np.real( prep.twod_inv_fft( prep.twod_fft_mag( img ))),
                           np.array(img), atol=1e-7)
     assert np.all(compare1)
 
-def test_twod_calc_freq():
+def test_twod_calc_freq(sq_img):
     """This test just makes sure that what the function outputs is indeed the correct size"""
-    img = imgage()
+    img = sq_img
     array1, array2 = prep.twod_calc_freq(img)
     image = np.array(img)
     width, height = image.shape
