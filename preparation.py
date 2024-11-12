@@ -1,7 +1,4 @@
-"""
-dummy preparations file 
-
-"""
+""" dummy preparations file """
 
 import numpy as np
 
@@ -36,13 +33,18 @@ def twod_inv_fft(mag):
     newthing = np.fft.ifft2(mag)
     return np.abs(newthing)
 
-def twod_calc_freq(image):
+def twod_calc_freq(image, width_ofimg, height_ofimg):
     """this takes in the same data as the fft equations only gives the possible frequencies
     of the data in a matrix form, since we are dealing with a 2d image the frequencys will
     come out as a 2d matrix this function should work for a rectangle image aswell as a
     square image but I have not tested this ik a square image works
+
+    width_ofimg, height_ofimg will be in the amount of unit length that the image is
+    cut to, so the amount of the meter stick is in the image
     """
     image_array = np.array(image)
-    width, height = image_array.shape
-    y, x = np.meshgrid(np.fft.fftfreq(width), np.fft.fftfreq(height))
-    return y, x
+    wdth, hght = image_array.shape
+    y, x = np.meshgrid(np.fft.fftfreq(wdth), np.fft.fftfreq(hght))
+    ynew = y*wdth/width_ofimg
+    xnew = x*hght/height_ofimg
+    return ynew, xnew
