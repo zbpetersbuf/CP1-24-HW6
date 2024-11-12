@@ -1,20 +1,36 @@
-""" unit test template
-
-"""
+""" This is to test the functions created in the preparation module """
 
 import numpy as np
+import pandas as pd
+import pytest
 import preparation as prep
 
 def test_dummy():
     """ unit test for dummy function """
     assert prep.dummy() == 0
 
-def imgage():
-    """creates 2d matrix to test functions"""
-    xax, yax = np.meshgrid(np.linspace(0, 4 * np.pi, 256), np.linspace(0, 4 * np.pi, 256))
-    matr = (0.5 * np.sin(2 * xax) * np.cos(3 * yax) + 0.3 * np.cos(5 * xax) * np.sin(2 * yax)
-           + 0.2 * np.sin(3 * xax) * np.cos(4 * yax) + 0.1 * np.cos(6 * xax) * np.sin(6 * yax))
-    return np.uint8((matr - np.min(matr)) / (np.max(matr) - np.min(matr)) * 255)
+@pytest.fixture
+def sq_img():
+    """ Fixture that returns a 2D square-shaped structure of data
+        in pandas DataFrame format (e.g., 256x256) with default indexing. """
+    # Define size
+    pix = 256
+    # Generate random pixel intensities for the simulated image (grayscale representation)
+    data = np.random.randint(256, size = (pix, pix), dtype = np.uint8)
+    # Convert to DataFrame
+    return pd.DataFrame(data)
+
+@pytest.fixture
+def rect_img():
+    """ Fixture that returns a 2D rectangular-shaped structure of data
+        in pandas DataFrame format (e.g., 512x256) with default indexing. """
+    # Define size
+    pix_x = 512
+    pix_y = 256
+    # Generate random pixel intensities for the simulated image (grayscale representation)
+    data = np.random.randint(256, size = (pix_x, pix_y), dtype = np.uint8)
+    # Convert to DataFrame
+    return pd.DataFrame(data)
 
 def test_twod_fft_mag():
     """this test makes sure that the twod_fft_mag functions properly, by testing this also makes
